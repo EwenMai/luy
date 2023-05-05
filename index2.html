@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    window.addEventListener('scroll', function() {
+  var scrollTop = window.pageYOffset; // 获取当前滚动距离
+  var layer1 = document.querySelector('.layer1');
+  var layer2 = document.querySelector('.layer2');
+  var layer3 = document.querySelector('.layer3');
+  layer1.style.transform = 'translateY(' + (-scrollTop * 0.1) + 'px)';
+  layer2.style.transform = 'translateY(' + (-scrollTop * 0.12) + 'px)';
+  layer3.style.transform = 'translateY(' + (-scrollTop * 0.3) + 'px)';
+});
+
+  </script>
+</body>
+  <body>
+    <div class="wrapper">
+      <img src="https://qiniu.touchdot.top/silvershop/2023/20230505190740465.png">
+    </div>
+     <div class="wrapper2">
+      <img src="https://qiniu.touchdot.top/silvershop/2023/20230505191959604.png">
+    </div>
+
+    <div class="layer layer1">
+      <div class="img2">
+      <img
+        src="https://qiniu.touchdot.top/silvershop/2023/20230505205209040.png"
+      /></div>
+    <div class="layer layer2">
+      <div class="img1">
+      <img
+        src="https://qiniu.touchdot.top/silvershop/2023/20230505203040197.png"
+      />
+    </div>
+    <div class="layer layer3">Layer 3</div>
+
+    
+    
+  </body>
+
+  <style>
+    body{
+      width: 100vw;
+      margin: 0;
+      padding: 0;
+    }
+    .img1{
+      position: absolute;
+      widows: 100%;
+      height: auto;
+      margin: 0;
+      padding: 0;
+    }
+    .img2{
+      position: absolute;
+      widows: 100%;
+      height: auto;
+      margin: 0;
+      padding: 0;
+      z-index: 88;
+      top: 1300px;
+    }
+    .wrapper {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .wrapper {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      top: 60%;
+      z-index: 99;
+      animation: moving 2s linear infinite;
+    }
+ .wrapper2 {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .wrapper2 {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      top: 35%;
+      left: 90%;
+      z-index: 99;
+      animation: moving 6s linear infinite;
+    }
+    @keyframes moving {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-30%);
+      }
+      100% {
+        transform: translateY(0%);
+      }
+    }
+.layer1 {
+  transform: translateY(0%);
+}
+
+.layer2 {
+  transform: translateY(0%);
+}
+
+.layer3 {
+  transform: translateY(30%);
+}
+  </style>
+
+</html>
